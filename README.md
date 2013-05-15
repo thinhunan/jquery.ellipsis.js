@@ -15,9 +15,9 @@ jquery.ellipsis.unobtrusive.js
 依赖jquery.ellipsis.js，非必须项，这个是用来支持用data-标签来控制行为
 使用方式：
 <pre>
-<p data-ellipsis="true" data-ellipsis-max-width="200" data-ellipsis-max-line="2">
+&lt;p data-ellipsis="true" data-ellipsis-max-width="200" data-ellipsis-max-line="2"&gt;
    ...
-</p>
+&lt;/p&gt;
 </pre>
 引入这个js即可自动根据元素上的data属性来处理，不需要写额外的脚本
 
