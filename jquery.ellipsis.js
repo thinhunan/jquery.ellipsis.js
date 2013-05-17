@@ -8,7 +8,7 @@
             max = $elem.width();
         }
         max = max * options.maxLine;
-        var text = $elem.text();
+        var text = $.trim($elem.text()).replace(' ','　');　
         var $temp_elem = $elem.clone(false)
             .css({ "visibility": "hidden", "whiteSpace": "nowrap","width":"auto" })
             .appendTo(document.body);
@@ -19,7 +19,7 @@
             var temp_str = text.substring(0, stop) + ellipsis_char;
             width = $temp_elem.text(temp_str).width();
         }
-        $elem.text($temp_elem.text());
+        $elem.text($temp_elem.text().replace('　',' '));
         $temp_elem.remove();
     }
 
