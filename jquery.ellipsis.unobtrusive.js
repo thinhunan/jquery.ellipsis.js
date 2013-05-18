@@ -24,7 +24,18 @@
     };
 
 
-    $(function () {
+    $(function () {    	
+		var beginAt = new Date;
+		if($ellipsis.debug){
+			console.log(beginAt);
+		}
+		
         $ellipsis.unobtrusive.parse(document);
+		
+		if($ellipsis.debug){
+			var endAt = new Date;
+			console.log(endAt);
+			console.log(endAt - beginAt);
+		}
     });
 }(jQuery));
