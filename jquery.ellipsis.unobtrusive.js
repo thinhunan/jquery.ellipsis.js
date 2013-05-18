@@ -38,4 +38,4 @@
 			console.log(endAt - beginAt);
 		}
     });
-}(jQuery));
+}(jQuery)); 
