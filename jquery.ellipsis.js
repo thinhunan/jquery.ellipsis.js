@@ -11,7 +11,7 @@
         max = max * options.maxLine;
         var text = $.trim($elem.text()).replace(' ','　'); //for fix white-space bug　
         var $temp_elem = $elem.clone(false)
-            .css({ "visibility": "hidden", "whiteSpace": "nowrap","width":"auto" })
+            .css({ "visibility": "hidden", "whiteSpace": "nowrap","width":"auto", "position":"absolute" })
             .appendTo(document.body);
         var width = $temp_elem.width();
 		if(width > max){
@@ -36,6 +36,7 @@
 				}
 			}
 			$elem.text(temp_str.replace('　',' '));
+			temp_str = text.substring(0, stop- Math.round(options.maxLine/2)) + ellipsis_char;//fix white-space bug
 		}
         $temp_elem.remove();
     }
